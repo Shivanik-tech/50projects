@@ -17,7 +17,7 @@ body {
   margin: 0;
 }
 .bg {
-  background: url(https://media.istockphoto.com/id/184601291/photo/xxxl-dark-concrete.jpg?b=1&s=170667a&w=0&k=20&c=KRRXq0P41imqerPjYF4EgX7QOdbybyprM8ofKYoIzT4=)
+  background:  url('https://images.unsplash.com/photo-1576161787924-01bb08dad4a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2104&q=80')
     no-repeat center center/cover;
   position: absolute;
   top: -30px;
