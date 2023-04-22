@@ -23,11 +23,17 @@ header,form{
 form input,
 form button{
  padding: 1rem;
- font-size: 2rem;
+ font-size: 1rem;
  border:none;
  background: rgb(18, 197, 167);
+ color:#fff;
 }
 form button{
+    padding:0.5rem;
+    margin-left: 0.5rem;
+    height: 5vh;
+    width:5vw;
+   
     color:rgb(18, 197, 167);
     background: #fff;
     cursor: pointer;
@@ -37,3 +43,32 @@ form button:hover{
     background: #fda085;
     color:#fff;
 }
+.todo-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list{
+    min-width:20% ;
+    list-style: none;
+}
+.todo{
+    margin:0.5rem;
+    /* padding:0.5rem; */
+    background: #fff;
+    color:rgb(18, 197, 167);
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+.todo li{
+    flex:1;
+}
+.trash-btn,
+.completed-btn{
+    background: #db4015;
+    color:#ffffff;
+    border:none;
+    cursor:pointer;
+} 
