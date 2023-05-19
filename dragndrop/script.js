@@ -1,20 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Drag N Drop</title>
-  </head>
-  <body>
-    <div class="empty">
-      <div class="fill" draggable="true"></div>
-    </div>
-    <div class="empty"></div>
-    <div class="empty"></div>
-    <div class="empty"></div>
-    <div class="empty"></div>
+const fill = document.querySelector('.fill')
+const empties = document.querySelectorAll('.empty')
 
-    <script src="script.js"></script>
-  </body>
-</html>
+fill.addEventListener('dragstart', dragStart)
+fill.addEventListener('dragend', dragEnd)
+
+for(const empty of empties) {
+    empty.addEventListener('dragover', dragOver)
+    empty.addEventListener('dragenter', dragEnter)
+    empty.addEventListener('dragleave', dragLeave)
+    empty.addEventListener('drop', dragDrop)
+}
+
+function dragStart() {
+    this.className += ' hold' 
+    setTimeout(() => this.className = 'invisible', 0)
+}
+
+function dragEnd() {
+    this.className = 'fill'
+}
+
+function dragOver(e) {
+    e.preventDefault()
+}
+
+function dragEnter(e) {
+    e.preventDefault()
+    this.className += ' hovered'
+}
+
+function dragLeave() {
+    this.className = 'empty'
+}
+
+function dragDrop() {
+    this.className = 'empty'
+    this.append(fill)
+}
