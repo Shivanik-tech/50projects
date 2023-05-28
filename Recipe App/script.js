@@ -6,7 +6,7 @@ const fetchRecipe=() =>{
 }
 searchBtn.addEventListener('click',(e)=>{
     e.preventDefault();
-    const searchInput=searchBox.ariaValueMax.trim()
+    const searchInput=searchBox.value.trim()
     fetchRecipe();
     //console.log("Button clicked")
 })
